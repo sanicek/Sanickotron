@@ -5,7 +5,7 @@
         <title>Hellooo World</title> 
  
         <script src="lib/touch/sencha-touch.js" type="text/javascript"></script> 
-        <link href="lib/touch/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" /> 
+        <link href="lib/touch/resources/css/sencha-touch.css" rel="stylesheet" type="text/css" />
  
         <script type="text/javascript"> 
  
@@ -13,7 +13,22 @@
                 launch: function() {
                     new Ext.Panel({
                         fullscreen: true,
-                        html: 'Hello World!'
+         				html: 'Hello World!',
+         				style: 'background-color: #fcc',
+         				dockedItems: [
+         					{
+         						style: 'background-color: #ccf',
+         						html: 'Docked something',
+         						dock: 'bottom'
+         					},
+         					new Ext.Toolbar({
+         						dock: 'top',
+         						title: 'Toolbar',
+         						items: [
+         							{text:'Button'}
+         						]
+         					})
+         				]
                     });
                 }
             });
